@@ -4,7 +4,7 @@ const Contact = () => (
   <section className="page contact">
     <div className="container">
       <h2>Contact Us</h2>
-      <p>Reach out at <a href="mailto:hello@creativedecorators.example">hello@creativedecorators.example</a></p>
+  <p>Reach out at <a href="mailto:hello@eventplannet.example">hello@eventplannet.example</a></p>
     </div>
   </section>
 )

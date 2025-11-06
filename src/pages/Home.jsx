@@ -4,11 +4,11 @@ const Home = () => {
   return (
     <section className="page home">
       <div className="hero">
-        <h1>creativeDecorators</h1>
+  <h1>EventPlannet</h1>
         <p className="tagline">Designing memorable spaces for people and events.</p>
         <div className="hero-actions">
           <a href="/auth" className="btn primary">Get Started</a>
-          <a href="/company" className="btn ghost">Our Work</a>
+          <a href="/events" className="btn ghost">Our Work</a>
         </div>
       </div>
       <div className="features">
