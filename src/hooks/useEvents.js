@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Event } from '../types';
 
 const useEvents = () => {
-    const [events, setEvents] = useState<Event[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchEvents = async () => {

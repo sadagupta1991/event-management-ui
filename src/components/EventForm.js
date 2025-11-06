@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 
-const EventForm: React.FC<{ onSubmit: (eventData: any) => void }> = ({ onSubmit }) => {
+const EventForm = ({ onSubmit }) => {
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('');
     const [description, setDescription] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit({ title, date, description });
         setTitle('');

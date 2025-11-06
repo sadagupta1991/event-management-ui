@@ -1,13 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 
-interface EventCardProps {
-  title: string;
-  date: string;
-  description: string;
-}
-
-const EventCard: React.FC<EventCardProps> = ({ title, date, description }) => {
+const EventCard = ({ title, date, description }) => {
   return (
     <Card className="mb-4">
       <CardContent>
