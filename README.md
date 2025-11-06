@@ -1,62 +1,16 @@
-# Event Management UI
+# React + Vite
 
-This is a React application for managing events, built with TypeScript, Tailwind CSS, and Material UI. The application provides a user-friendly interface for creating, viewing, and managing events.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Event Creation**: Users can create new events using a form.
-- **Event Listing**: A list of events is displayed, allowing users to view all available events.
-- **Event Details**: Detailed information about each event can be viewed.
-- **Responsive Design**: The application is styled using Tailwind CSS for a responsive and modern look.
-- **Material UI Integration**: Material UI components are used for consistent styling and functionality.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Getting Started
+## React Compiler
 
-To get started with the project, follow these steps:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd event-management-ui
-   ```
+## Expanding the ESLint configuration
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Run the application**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**:
-   Navigate to `http://localhost:3000` to view the application.
-
-## Project Structure
-
-- `public/index.html`: Main HTML file for the application.
-- `src/main.tsx`: Entry point of the React application.
-- `src/App.tsx`: Main App component with routing and layout.
-- `src/components/`: Contains reusable components like Header, EventList, EventCard, and EventForm.
-- `src/pages/`: Contains page components like Home, EventDetails, and CreateEvent.
-- `src/hooks/`: Custom hooks for managing state and API calls.
-- `src/contexts/`: Contexts for managing global state.
-- `src/themes/`: Material UI theme configuration.
-- `src/types/`: TypeScript types and interfaces.
-- `src/utils/`: Utility functions for API calls.
-
-## Technologies Used
-
-- **React**: JavaScript library for building user interfaces.
-- **TypeScript**: Superset of JavaScript that adds static types.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **Material UI**: React components that implement Google's Material Design.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
