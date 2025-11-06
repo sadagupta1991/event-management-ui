@@ -2,6 +2,8 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  /* header height used across layout for spacing when header is fixed */
+  --header-height: 64px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -24,8 +26,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* Use normal document flow so sticky header sits at the very top */
+  display: block;
   min-width: 320px;
   min-height: 100vh;
 }
