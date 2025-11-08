@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "event-management-ui",
+      "script": "npm",
+      "args": "run dev",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
