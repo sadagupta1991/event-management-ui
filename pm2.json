@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "event-management-ui",
-      "script": "npm",
+      "script": "index.js",
       "args": "run dev",
       "watch": true,
       "env": {
