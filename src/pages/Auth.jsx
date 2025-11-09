@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Paper, Typography, TextField, Button } from '@mui/material';
+import { Paper, Typography, TextField, Button, Box } from '@mui/material';
 
 // Accept onClose when rendered inside the Modal so we can close it if needed
 const Auth = ({ onClose }) => {
@@ -14,21 +14,23 @@ const Auth = ({ onClose }) => {
   };
 
   return (
-    <section className="page auth bg-gray-100 py-12">
-      <Container maxWidth="xs">
-        <Paper elevation={3} className="p-8">
-          <Typography variant="h5" className="text-center mb-4">Login</Typography>
-          <form className="auth-form" onSubmit={(e) => e.preventDefault()}>
-            <TextField label="Email" fullWidth className="mb-4" />
-            <TextField label="Password" type="password" fullWidth className="mb-4" />
-            <div className="flex justify-center gap-4">
-              <Button variant="contained" color="primary">Login</Button>
-              <Button variant="outlined" onClick={handleSignupClick}>Signup</Button>
-            </div>
+    <Box className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+        <Paper elevation={3} className="p-8 rounded-lg">
+          <Typography variant="h4" className="text-center mb-6 font-bold">Login</Typography>
+          <form className="" onSubmit={(e) => e.preventDefault()}>
+            <Box>
+              <TextField label="Email" fullWidth variant="outlined"/>
+            </Box>
+            <Box>
+              <TextField label="Password" type="password" fullWidth variant="outlined" />
+            </Box>
+            <Box display="flex" flexDirection="column" gap={2}>
+              <Button variant="contained" color="primary" size="large">Login</Button>
+              <Button variant="outlined" onClick={handleSignupClick} size="large">Signup</Button>
+            </Box>
           </form>
         </Paper>
-      </Container>
-    </section>
+    </Box>
   );
 };
 

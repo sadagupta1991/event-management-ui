@@ -1,10 +1,10 @@
 {
   "apps": [
     {
-      "name": "event-management-ui",
-      "script": "index.js",
-      "args": "run dev",
+      "name": "event-management-server",
+      "script": "src/server/index.js",
       "watch": true,
+      "ignore_watch": ["node_modules"],
       "env": {
         "NODE_ENV": "development"
       }
