@@ -12,15 +12,8 @@ const Auth = ({ onClose }) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <Paper elevation={4} className="p-8 rounded-2xl w-full max-w-md">
-        <Typography
-          variant="h4"
-          className="text-center mb-6 font-bold text-gray-800"
-        >
-          Login
-        </Typography>
-
+    <div className="h-full w-full flex items-center justify-center bg-gray-100 p-4">
+      <div elevation={4} className="p-8 rounded-2xl w-full max-w-md">
         {/* MUI Stack handles spacing properly */}
         <form onSubmit={(e) => e.preventDefault()}>
           <Stack spacing={3}>
@@ -55,10 +48,9 @@ const Auth = ({ onClose }) => {
             </Stack>
           </Stack>
         </form>
-      </Paper>
+      </div>
     </div>
   );
 };
 
 export default Auth;
-
