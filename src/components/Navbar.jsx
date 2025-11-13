@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Modal from './Modal.js'
-import Login from './Login.js'
+import Modal from './Modal.jsx'
+import Login from './Login.jsx'
 
 const Navbar = () => {
   const location = useLocation()
