@@ -1,16 +1,14 @@
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Events from './pages/Events'
-import Auth from './pages/Auth'
-import Signup from './pages/Signup'
+import Home from './pages/Home.js'
+import About from './pages/About.js'
+import Contact from './pages/Contact.js'
+import Events from './pages/Events.js'
+import Signup from './pages/Signup.js'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/about', component: About },
   { path: '/contact', component: Contact },
   { path: '/events', component: Events },
-  { path: '/auth', component: Auth },
   { path: '/signup', component: Signup },
 ]
 
