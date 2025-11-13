@@ -10,5 +10,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist/event-management-ui',
+    base: '/event-management-ui/', // Explicitly set base for build
   },
 })
