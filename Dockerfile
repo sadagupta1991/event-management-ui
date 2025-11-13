@@ -1,38 +1,30 @@
 # Stage 1: Builder
-FROM node:20 as builder
+FROM node:22-alpine AS builder
 
 # Set working directory
 WORKDIR /app
 
-# Copy only package.json (no package-lock.json)
-COPY package.json ./
+# Copy package files and install dependencies
+COPY package*.json ./
+RUN npm ci
 
-# Install dependencies
-RUN npm install
-
-# Copy rest of the project files
+# Copy source code
 COPY . .
 
 # Build production bundle
 RUN npm run build
 
 # Stage 2: Production
-FROM alpine:latest
-
-# Install Nginx to serve static files
-RUN apk add --no-cache nginx
+FROM nginx:alpine
 
 # Copy build output from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Remove default Nginx configuration
-RUN rm /etc/nginx/conf.d/default.conf
-
-# Add your custom Nginx config
+# Replace default Nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
 EXPOSE 80
 
-# Run Nginx
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
