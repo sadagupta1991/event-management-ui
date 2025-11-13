@@ -5,7 +5,7 @@ import routes from './routes'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/event-management-ui/">
       <Navbar />
       <main className="app-container">
         <Routes>
