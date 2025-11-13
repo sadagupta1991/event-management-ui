@@ -9,7 +9,6 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    outDir: 'dist/event-management-ui',
-    base: '/event-management-ui/', // Explicitly set base for build
+    outDir: 'dist', // Default output directory
   },
 })
