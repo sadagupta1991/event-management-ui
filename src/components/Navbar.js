@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import Modal from './Modal'
-import Auth from '../pages/Auth'
+import Modal from './Modal.js'
+import Login from './Login.js'
 
 const Navbar = () => {
   const location = useLocation()
@@ -31,8 +31,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      <Modal open={authOpen} onClose={closeAuth} title={"Welcome to EventPlannet"}>
-        <Auth onClose={closeAuth} />
+      <Modal open={authOpen} onClose={closeAuth}>
+        <Login onClose={closeAuth} open={authOpen} />
       </Modal>
     </header>
   )
